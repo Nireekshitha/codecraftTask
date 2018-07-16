@@ -1,0 +1,878 @@
+header {
+  position: relative;
+  margin-top: 20px;
+  z-index: 215;
+}
+
+.margin-style-item {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.header-text {
+  font-size: 48px;
+  color: black;
+  text-transform: uppercase;
+  font-family: 'Montserrat-Bold'
+}
+ :focus{
+   outline: none !important;
+ }
+
+.slidebox {
+  position: relative;
+  width: 40px;
+  height: 20px;
+  display: inline-block;
+}
+
+.slidebox input {
+  visibility: hidden;
+}
+
+.slidebox label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 20px;
+  background: black;
+  box-shadow: inset 0 1px 3px 0 rgba(0, 0, 0, .3);
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all .2s ease;
+}
+
+.slidebox label:after {
+  position: absolute;
+  content: "";
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background-image: linear-gradient(-180deg, #F8F9F6 0, #F5F5F5 100%);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .3);
+  border-radius: 8px;
+  transition: all .15s ease;
+}
+
+.slidebox input[type=checkbox]:checked+label {
+  background: black;
+}
+
+.slidebox input[type=checkbox]:checked+label:after {
+  left: 22px;
+}
+
+.side-bar {
+  position: fixed !important;
+  top: 0;
+  bottom: 0;
+  height: 100vh;
+  /* overflow: scroll; */
+  background: #3484F5;
+  background-image: linear-gradient(to bottom, #AD6BFF, #74BCF7);
+  /* s-gradient(to bottom,rgba(173,107,255,0.00), rgba(149,140,252,0.30), #9291FB, rgba(141,152,251,0.85), rgba(116,188,247,0.00));  */
+}
+
+.list-item {
+  position: relative;
+  background-color: #fff;
+  z-index: 100;
+  margin-bottom: 20px;
+}
+
+.list-item:after {
+  content: "";
+  position: absolute;
+  height: 5px;
+  border-bottom: 2px dotted #AC6CFF;
+  ;
+  top: 10px;
+  right: 0;
+  width: 93%;
+  overflow: hidden;
+}
+
+.container {
+  display: inline-block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  margin-top: 10px;
+  display: inline-block;
+  height: 40px;
+  ;
+  margin-top: 15px;
+}
+
+/* Hide the browser's default checkbox */
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  display: none;
+}
+
+/* Create a custom checkbox */
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+
+.container input:checked~.checkmark:after {
+  background-image: url('/assets/images/tick-wh.png');
+  background-size: contain;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 20px;
+  text-align: center;
+  display: table-cell;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+
+}
+
+/* Style the checkmark/indicator */
+
+.container .checkmark:after {}
+
+.mode-item {
+  height: 50px;
+  margin: 5px 0;
+  padding: 0;
+  line-height: 50px;
+  color: #000;
+  font-family: 'Montserrat-Regular';
+}
+
+.mode-item-active {
+  height: 50px;
+  background-image: linear-gradient(to right, #AD6BFF, #74BCF7);
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.15);
+  margin: 5px 0;
+  line-height: 50px;
+  color: #fff;
+}
+
+.sub-header {
+  font-family: 'Montserrat-Bold';
+  font-size: 32px;
+  letter-spacing: 5.2px;
+  line-height: 39px;
+  text-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
+}
+
+.list-item {
+  font-family:'Montserrat-Bold';
+  font-size: 15px;
+  color: #AC6CFF;
+  letter-spacing: 1.5px;
+}
+
+.parent-div {
+  position: relative;
+  z-index: 0;
+  height: 160px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.parent-div .layer1 {
+  position: absolute;
+  z-index: 2;
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+  top: 10px;
+  left: 10px;
+}
+
+.parent-div .layer2 {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  height: 120px;
+  width: 203px;
+  top: 30px;
+  left: 110px;
+  display: table;
+  text-align: center;
+}
+.parent-active-div{
+  position: relative;
+  z-index: 0;
+  height: 160px;
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+.parent-active-div .layer1 {
+  position: absolute;
+  z-index: 2;
+  background-size: cover;
+  height: 120px;
+  width: 120px;
+  top: 10px;
+  right: -20px;
+}
+.parent-active-div .layer2 {
+  position: absolute;
+  z-index: 1;
+  background-color: #fff;
+  height: 120px;
+  width: 203px;
+  top: 30px;
+  right: 80px;
+  display: table;
+  text-align: center;
+}
+
+.shade-item {
+  height: 60px;
+  display: block;
+}
+
+.morning:before {
+  background-image: url('/assets/images/morning-wh.png');
+  content: " ";
+  display: inline-block;
+  /* width: 24px;
+height: 24px;line-height: 60px; */
+  vertical-align: middle;
+  margin-right: 15px;
+}
+
+.day:before {
+  background-image: url('/assets/images/day-dk.png');
+  content: " ";
+  display: inline-block;
+  /* width: 24px;
+height: 24px;line-height: 60px; */
+  vertical-align: middle;
+  /* margin-right: 15px; */
+}
+
+.night:before {
+  background-image: url('/assets/images/night-dk.png');
+  content: " ";
+  display: inline-block;
+  /* width: 24px; */
+  /* height: 24px;line-height: 60px; */
+  vertical-align: middle;
+  /* margin-right: 15px; */
+}
+
+.modecheckbox input[type="radio"] {
+  display: none;
+}
+
+.modecheckbox input[type="radio"]+label {
+  background: url('/assets/images/tick-wh-lt.png') no-repeat;
+  width: 20px;
+  height: 20px;
+}
+
+.modecheckbox input[type="radio"]:checked+label {
+  background: url('/assets/images/tick-wh.png');
+  width: 20px;
+  height: 20px;
+}
+.slick-fade-class{
+  opacity: 0.2 !important;
+}
+@media (min-width: 1281px) {
+  .arrow-botton{
+    content:'>';
+    background-image: linear-gradient(-135deg, #DEFFC9 0%, #A3F8FF 100%);
+    box-shadow: 0 15px 30px 0 rgba(234, 252, 223, 0.40);
+    height: 30px;
+    width: 30px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    position: absolute;
+    top: 80px;
+    right: -10px;
+  
+  }
+  .img-list {
+    height: 120px;
+    width: 120px;
+  }
+  .layer2 div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .plus-button {
+    background-image: linear-gradient(-135deg, #DEFFC9 0%, #A3F8FF 100%);
+    box-shadow: 0 15px 30px 0 rgba(234, 252, 223, 0.40);
+    height: 56px;
+    width: 56px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 56px;
+    font-size: 30px;
+  }
+  .screen-viewer,
+  .header-center {
+    padding: 30px 80px 20px 100px;
+    overflow-x: hidden;
+  }
+  .morning:before {
+    margin: 0 10px !important;
+    width: 24px;
+    height: 24px;
+  }
+  .day:before {
+    margin: 0 10px !important;
+    width: 24px;
+    height: 24px;
+  }
+  .night:before {
+    margin: 0 10px !important;
+    width: 24px;
+    height: 24px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    /* margin-top: 15px; */
+  }
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked~.checkmark {
+    box-shadow: 0 27px 27px 0 rgba(0, 0, 0, 0.15);
+    height: 42px;
+    width: 42px;
+    display: table;
+  }
+}
+
+/* 
+        ##Device = Laptops, Desktops
+        ##Screen = B/w 1025px to 1280px
+      */
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .layer2 div {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  .img-list {
+    width: 120px;
+    height: 120px;
+    ;
+  }
+  .plus-button {
+    background-image: linear-gradient(-135deg, #DEFFC9 0%, #A3F8FF 100%);
+    box-shadow: 0 15px 30px 0 rgba(234, 252, 223, 0.40);
+    height: 56px;
+    width: 56px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 56px;
+    font-size: 30px;
+  }
+  .screen-viewer,
+  .header-center {
+    padding: 0 80px 0 100px;
+    overflow-x: hidden;
+  }
+  .morning:before {
+    margin: 0 10px !important;
+    width: 24px;
+    height: 24px;
+  }
+  .day:before {
+    margin: 0 10px !important;
+    width: 24px;
+    height: 24px;
+  }
+  .night:before {
+    margin: 0 10px !important;
+    width: 24px;
+    height: 24px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    margin-top: 15px;
+  }
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked~.checkmark {
+    box-shadow: 0 27px 27px 0 rgba(0, 0, 0, 0.15);
+    height: 42px;
+    width: 42px;
+    display: table;
+  }
+  .arrow-botton{
+    content:'>';
+    background-image: linear-gradient(-135deg, #DEFFC9 0%, #A3F8FF 100%);
+    box-shadow: 0 15px 30px 0 rgba(234, 252, 223, 0.40);
+    height: 30px;
+    width: 30px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 30px;
+    font-size: 14px;
+    position: absolute;
+    top: 80px;
+    right: -10px;
+  
+  }
+}
+
+/* 
+        ##Device = Tablets, Ipads (portrait)
+        ##Screen = B/w 768px to 1024px
+      */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .plus-button {
+    background-image: linear-gradient(-135deg, #DEFFC9 0%, #A3F8FF 100%);
+    box-shadow: 0 15px 30px 0 rgba(234, 252, 223, 0.40);
+    height: 56px;
+    width: 56px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 56px;
+    font-size: 30px;
+  }
+  .parent-div {
+    height: 150px;
+  }
+  .parent-div .layer1 {
+    position: absolute;
+    z-index: 20;
+    height: 120px;
+    width: 120px;
+    top: 10px;
+    left: 10px;
+  }
+  .parent-div .layer2 {
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    height: 120px;
+    width: 120px;
+    top: 30px;
+    left: 40px;
+    display: table;
+    text-align: center;
+  }
+  .parent-active-div {
+    height: 150px;
+  }
+  .parent-active-div .layer1 {
+    position: absolute;
+    z-index: 20;
+    height: 120px;
+    width: 120px;
+    top: 10px;
+    right: 10px;
+  }
+  .parent-active-div .layer2 {
+   display: none;
+  }
+  .img-list {
+    width: 120px;
+    height: 120px;
+    ;
+  }
+  .item-head {
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+    ;
+  }
+  .item-sub-head {
+    visibility: hidden;
+    display: none;
+  }
+  .screen-viewer,
+  .header-center {
+    padding: 0 40px 0 70px;
+    overflow-x: hidden;
+  }
+  .morning:before {
+    margin: 0 10px !important;
+    width: 24px;
+    height: 24px;
+  }
+  .day:before {
+    margin: 0 10px !important;
+    width: 24px;
+    height: 24px;
+  }
+  .night:before {
+    margin: 0 10px !important;
+    width: 24px;
+    height: 24px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    margin-top: 15px;
+  }
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked~.checkmark {
+    box-shadow: 0 27px 27px 0 rgba(0, 0, 0, 0.15);
+    height: 42px;
+    width: 42px;
+    display: table;
+  }
+}
+
+/* 
+        ##Device = Tablets, Ipads (landscape)
+        ##Screen = B/w 768px to 1024px
+      */
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .plus-button {
+    background-image: linear-gradient(-135deg, #DEFFC9 0%, #A3F8FF 100%);
+    box-shadow: 0 15px 30px 0 rgba(234, 252, 223, 0.40);
+    height: 56px;
+    width: 56px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 56px;
+    font-size: 30px;
+  }
+  .parent-div {
+    height: 150px;
+  }
+  .parent-div .layer1 {
+    position: absolute;
+    z-index: 20;
+    height: 120px;
+    width: 120px;
+    top: 10px;
+    left: 10px;
+  }
+  .parent-div .layer2 {
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    height: 120px;
+    width: 120px;
+    top: 30px;
+    left: 40px;
+    display: table;
+    text-align: center;
+  }
+  .parent-active-div {
+    height: 150px;
+  }
+  .parent-active-div .layer1 {
+    position: absolute;
+    z-index: 20;
+    height: 120px;
+    width: 120px;
+    top: 10px;
+    right: 10px;
+  }
+  .parent-active-div .layer2 {
+   display: none;
+  }
+  .img-list {
+    width: 120px;
+    height: 120px;
+    ;
+  }
+  .item-head {
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+    ;
+  }
+  .item-sub-head {
+    visibility: hidden;
+    display: none;
+  }
+  .screen-viewer,
+  .header-center {
+    padding: 0 40px 0 70px;
+    overflow-x: hidden;
+  }
+  .morning:before {
+    margin-right: 8px !important;
+    width: 22px;
+    height: 22px;
+  }
+  .day:before {
+    margin-right: 8px !important;
+    width: 22px;
+    height: 22px;
+  }
+  .night:before {
+    margin-right: 8px !important;
+    width: 22px;
+    height: 22px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 32px;
+    width: 32px;
+    margin-top: 15px;
+  }
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked~.checkmark {
+    box-shadow: 0 27px 27px 0 rgba(0, 0, 0, 0.15);
+    height: 42px;
+    width: 42px;
+    display: table;
+  }
+}
+
+/* 
+        ##Device = Low Resolution Tablets, Mobiles (Landscape)
+        ##Screen = B/w 481px to 767px
+      */
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .plus-button {
+    box-shadow: 0 15px 30px 0 rgba(234, 252, 223, 0.40);
+    height: 28px;
+    width: 28px;
+    display: table;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 28px;
+  }
+  .parent-div {
+    height: 150px;
+  }
+  .parent-div .layer1 {
+    position: absolute;
+    z-index: 20;
+    height: 120px;
+    width: 120px;
+    top: 10px;
+    left: 10px;
+  }
+  .parent-div .layer2 {
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    height: 120px;
+    width: 120px;
+    top: 30px;
+    left: 40px;
+    display: table;
+    text-align: center;
+  }
+  .parent-active-div {
+    height: 150px;
+  }
+  .parent-active-div .layer1 {
+    position: absolute;
+    z-index: 20;
+    height: 100px;
+    width: 100px;
+    top: 10px;
+    right: 10px;
+  }
+  .parent-active-div .layer2 {
+   display: none;
+  }
+  .img-list {
+    width: 120px;
+    height: 120px;
+    ;
+  }
+  .item-head {
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+    ;
+  }
+  .item-sub-head {
+    visibility: hidden;
+    display: none;
+  }
+  .screen-viewer,
+  .header-center {
+    padding: 0 40px 0 70px;
+    overflow-x: hidden;
+  }
+  .morning:before {
+    margin-right: 5px !important;
+    width: 22px;
+    height: 22px;
+  }
+  .day:before {
+    margin-right: 5px !important;
+    width: 22px;
+    height: 22px;
+  }
+  .night:before {
+    margin-right: 5px !important;
+    width: 22px;
+    height: 22px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    margin-top: 15px;
+  }
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked~.checkmark {
+    box-shadow: 0 27px 27px 0 rgba(0, 0, 0, 0.15);
+    height: 32px;
+    width: 32px;
+    display: table;
+  }
+}
+
+/* 
+        ##Device = Most of the Smartphones Mobiles (Portrait)
+        ##Screen = B/w 320px to 479px
+      */
+
+@media (min-width: 300px) and (max-width: 480px) {
+  .parent-div {
+    height: 150px;
+  }
+  .parent-div .layer1 {
+    position: absolute;
+    z-index: 20;
+    height: 100px;
+    width: 100px;
+    top: 10px;
+    left: 10px;
+  }
+  .parent-div .layer2 {
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    height: 100px;
+    width: 100px;
+    top: 30px;
+    left: 40px;
+    display: table;
+    text-align: center;
+  }
+  .parent-active-div {
+    height: 150px;
+  }
+  .parent-active-div .layer1 {
+    position: absolute;
+    z-index: 20;
+    height: 100px;
+    width: 100px;
+    top: 10px;
+    right: 10px;
+  }
+  .parent-active-div .layer2 {
+   display: none;
+  }
+  .img-list {
+    width: 100px;
+    height: 100px;
+    ;
+  }
+  .item-head {
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+    ;
+  }
+  .item-sub-head {
+    visibility: hidden;
+    display: none;
+  }
+  .header-text {
+    margin: auto;
+    text-align: center;
+  }
+  .plus-button {
+    position: absolute;
+    top: -30px;
+    right: 20px;
+  }
+  .screen-viewer {
+    padding: 0 20px 0 30px;
+    overflow-x: hidden;
+  }
+  .morning:before {
+    margin-right: 5px !important;
+    width: 22px;
+    height: 22px;
+  }
+  .day:before {
+    margin-right: 5px !important;
+    width: 22px;
+    height: 22px;
+  }
+  .night:before {
+    margin-right: 5px !important;
+    width: 22px;
+    height: 22px;
+  }
+  .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    margin-top: 15px;
+  }
+  /* When the checkbox is checked, add a blue background */
+  .container input:checked~.checkmark {
+    box-shadow: 0 27px 27px 0 rgba(0, 0, 0, 0.15);
+    height: 32px;
+    width: 32px;
+    display: table;
+  }
+  .container {
+    padding-left: 25px;
+  }
+  .header-text {
+    font-size: 32px;
+    color: black;
+    letter-spacing: 10.2px;
+    text-transform: uppercase;
+  }
+}

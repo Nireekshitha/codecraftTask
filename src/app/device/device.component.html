@@ -1,0 +1,116 @@
+<header>
+  <div class="col-sm-offset-3 col-sm-9 col-md-offset-3 col-md-9 col-lg-offset-3 col-lg-9 header-center">
+    <div class="header-text">Devices
+      <span class="pull-right plus-button">
+        <img src="/assets/images/plus-dk.png">
+      </span>
+    </div>
+  </div>
+</header>
+<main class="col-sm-12 no-padding">
+  <aside class="col-xs-5 col-sm-3 col-md-3 col-lg-3 side-bar  slider-for no-padding"> 
+      <div  class="parent" *ngFor="let item of items;let i=index ">
+        <div [ngClass]="{'parent-active-div': selectedIndex == i, 'parent-div':selectedIndex != i }"  >
+        <div (click)="gotTonthSlide(i)">
+          <div class="layer1">
+            <img class="img-list" src="{{item.image}}">
+            <span *ngIf="selectedIndex == i" class="pull-right arrow-botton">
+              <img src="/assets/images/chevron-right.png" alt="right image">
+            </span>
+          </div>
+          <div class="layer2">
+            <div>
+              <span class="item-head"> {{item.heading}}</span>
+              <br/>
+              <span class="item-sub-head">{{item.subheading}}</span>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
+  </aside>
+  <section class="screen-viewer slider-nav col-lg-offset-3 col-md-offset-3 col-sm-offset-3 col-xs-offset-5 col-xs-7 col-sm-9 col-md-9 col-lg-9">
+    <div>
+      <span class="sub-header">{{deviceName}}</span>
+      <span class="slidebox pull-right">
+        <input id="device-visible" type="checkbox" name="device-visible" checked="checked">
+        <label for="device-visible"></label>
+      </span>
+    </div>
+    <div class="margin-style-item ">
+      <div class="col-sm-12 no-padding">
+        <span class="list-item col-sm-12 no-padding">SHADES</span>
+      </div>
+      <div class="col-sm-12 shade-item">
+        <label class="container col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <input type="checkbox" checked="checked">
+          <span class="checkmark" [ngStyle]="{'background':'#FF4563'}"></span>
+        </label>
+        <label class="container col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <input type="checkbox">
+          <span class="checkmark" [ngStyle]="{'background':'#8245E6'}"></span>
+        </label>
+        <label class="container col-xs-3 col-sm-2 col-md-2 col-lg-2">
+          <input type="checkbox">
+          <span class="checkmark" [ngStyle]="{'background':'#4AC0E0'}"></span>
+        </label>
+        <label class="container col-xs-3 col-sm-2 col-md-2 col-lg-2">
+          <input type="checkbox">
+          <span class="checkmark" [ngStyle]="{'background':'#4AC0E0'}"></span>
+        </label>
+        <label class="container col-xs-3 col-sm-2 col-md-2 col-lg-2">
+          <input type="checkbox">
+          <span class="checkmark" [ngStyle]="{'background':'#1089EB'}"></span>
+        </label>
+
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="margin-style-item">
+      <div class="col-sm-12 no-padding">
+        <span class="list-item col-sm-12 no-padding">MODES</span>
+      </div>
+      <div class="col-sm-12 mode-item" [ngClass]="{
+                        'mode-item-active':mode == 'morning'}">
+        <div class="col-xs-8 col-sm-6  no-padding  morning">Morning</div>
+        <div class="hidden-xs col-sm-4"> 50%</div>
+        <div class="col-xs-4 col-sm-2">
+          <div class="modecheckbox">
+            <input type="radio" name="mode" value="morning" id="mode" [(ngModel)]="mode" />
+            <label for="mode"></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 mode-item" [ngClass]="{'mode-item-active':mode == 'day'}">
+        <div class="col-xs-8 col-sm-6 no-padding day"> Day</div>
+        <div class="hidden-xs col-sm-4"> 50%</div>
+        <div class="col-xs-4 col-sm-2">
+          <div class="modecheckbox">
+            <input type="radio" name="mode" value="day" id="day" [(ngModel)]="mode" />
+            <label for="day"></label>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-12 mode-item" [ngClass]="{'mode-item-active':mode == 'night'}">
+        <div class=" col-xs-8 col-sm-6  no-padding night"> night</div>
+        <div class="hidden-xs col-sm-4"> 50%</div>
+        <div class="col-xs-4 col-sm-2">
+          <div class="modecheckbox">
+            <input type="radio" name="mode" value="night" id="night" [(ngModel)]="mode" />
+            <label for="night"></label>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="margin-style-item col-sm-12 no-padding">
+      <div cclass="ol-sm-12 no-padding">
+        <span class="list-item col-sm-12 no-padding ">INTENSITY</span>
+      </div>
+      <div class="col-sm-12 margin-style-item  ">
+        <div id="slider"></div>
+      </div>
+    </div>
+  </section>
+
+</main>

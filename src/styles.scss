@@ -1,0 +1,137 @@
+/* You can add global styles to this file, and also import other style files */
+
+// @import url('https://fonts.googleapis.com/css?family=Montserrat:100,300,400,500,600,700,800');
+//@import url('../assets/fonts/Montserrat/OFL.txt');
+@font-face {
+  font-family: 'Montserrat-Bold';
+  src: url('./assets/fonts/Montserrat/Montserrat-Bold.eot');
+  /* IE9 Compat Modes */
+  src: url('./assets/fonts/Montserrat/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Montserrat/Montserrat-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Bold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Montserrat/Montserrat-Bold.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-Black';
+  src: url('./assets/fonts/Montserrat/Montserrat-Black.eot');
+  /* IE9 Compat Modes */
+  src: url('./assets/fonts/Montserrat/Montserrat-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Montserrat/Montserrat-Black.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Black.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Black.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Montserrat/Montserrat-Black.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraBold';
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraBold.eot');
+  /* IE9 Compat Modes */
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Montserrat/Montserrat-ExtraBold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-ExtraBold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-ExtraBold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Montserrat/Montserrat-ExtraBold.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+
+@font-face {
+  font-family: 'Montserrat-ExtraLight';
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraLight.eot');
+  /* IE9 Compat Modes */
+  src: url('./assets/fonts/Montserrat/Montserrat-ExtraLight.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Montserrat/Montserrat-ExtraLight.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-ExtraLight.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-ExtraLight.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Montserrat/Montserrat-ExtraLight.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Montserrat-Light';
+  src: url('./assets/fonts/Montserrat/Montserrat-Light.eot');
+  /* IE9 Compat Modes */
+  src: url('./assets/fonts/Montserrat/Montserrat-Light.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Montserrat/Montserrat-Light.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Light.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Light.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Montserrat/Montserrat-Light.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Montserrat-Medium';
+  src: url('./assets/fonts/Montserrat/Montserrat-Medium.eot');
+  /* IE9 Compat Modes */
+  src: url('./assets/fonts/Montserrat/Montserrat-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Montserrat/Montserrat-Medium.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Medium.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Montserrat/Montserrat-Medium.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url('./assets/fonts/Montserrat/Montserrat-Regular.eot');
+  /* IE9 Compat Modes */
+  src: url('./assets/fonts/Montserrat/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Montserrat/Montserrat-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Regular.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Montserrat/Montserrat-Regular.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Montserrat-SemiBold';
+  src: url('./assets/fonts/Montserrat/Montserrat-SemiBold.eot');
+  /* IE9 Compat Modes */
+  src: url('./assets/fonts/Montserrat/Montserrat-SemiBold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Montserrat/Montserrat-SemiBold.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-SemiBold.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-SemiBold.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Montserrat/Montserrat-SemiBold.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+@font-face {
+  font-family: 'Montserrat-Thin';
+  src: url('./assets/fonts/Montserrat/Montserrat-Thin.eot');
+  /* IE9 Compat Modes */
+  src: url('./assets/fonts/Montserrat/Montserrat-Thin.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('./assets/fonts/Montserrat/Montserrat-Thin.woff2') format('woff2'), /* Super Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Thin.woff') format('woff'), /* Pretty Modern Browsers */
+  url('./assets/fonts/Montserrat/Montserrat-Thin.ttf') format('truetype'), /* Safari, Android, iOS */
+  url('./assets/fonts/Montserrat/Montserrat-Thin.svg#svgFontName') format('svg');
+  /* Legacy iOS */
+}
+.no-padding {
+  padding: 0 !important;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+
+.rs-path-color  {
+  background-color: #939393 !important;
+}
+.rs-handle {
+  background-image: linear-gradient( #AD6BFF, #74BCF7) !important;
+}
+
+.rs-range-color  {
+  background-color:linear-gradient( #AD6BFF, #74BCF7) !important;
+}
+.slick-list {
+  overflow: inherit !important;
+}
+.slick-arrow{
+  display: none !important;
+}
+.slick-next{
+  display: none  !important;
+}
+.slick-current{
+  opacity: 0.2 !important;
+}
